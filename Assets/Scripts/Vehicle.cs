@@ -4,12 +4,13 @@ using UnityEngine;
 //Base class
 public abstract class Vehicle : MonoBehaviour
 {
+    //Protected fields for encapsulation
     private string make;
     private string model;
     private int year;
     private Color color;
 
-    //Properties with encapsulation
+    //Properties with encapsulation //ENCAPSULATION
     public string Make { get => make; set => make = value; }
     public string Model { get => model; set => model = value; }
     public int Year { get => year; set {
@@ -23,8 +24,8 @@ public abstract class Vehicle : MonoBehaviour
     } }
     public Color Color { get => color; set => color = value; }
 
-    //Abstract methods for polymorphism
-    public abstract void Start();
-    public abstract void Stop();
-    public abstract void DisplayInfo();
+    //Abstract methods for polymorphism //ABSTRACTION
+    public abstract void StartVehicle();  //POLYMORPHISM
+    public abstract void StopVehicle();   //POLYMORPHISM
+    public abstract void DisplayInfo(); //POLYMORPHISM
 }
